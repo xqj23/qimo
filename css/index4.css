@@ -1,0 +1,74 @@
+/* ========== 品牌介绍模块（company-intro）样式 ========== */
+/* 品牌介绍外层容器：上下内边距，撑开模块高度 */
+.company-intro {
+    padding: 50px 0;
+}
+
+/* 品牌介绍主标题：底部间距、字体大小、居中、文字颜色 */
+.company-intro h1 {
+	margin-bottom: 40px;
+	font-size: 28px;
+    text-align: center;   
+    color: #333;
+}
+
+/* 品牌介绍图文容器：弹性布局，元素间距，垂直居中 */
+.intro-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* 品牌介绍配图：固定宽高、圆角美化 */
+.intro-content img {
+    width: 580px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* 品牌介绍文字容器（注释备用）：占满剩余宽度 */
+/* .text-content {
+    flex: 1;
+} */
+
+/* 品牌介绍文字内容：底部间距、行高、文字颜色 */
+.text-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* ========== 品牌优势模块（our-advantages）样式 ========== */
+/* 品牌优势标题：字体大小、居中、底部间距 */
+.our-advantages h2{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 优势项网格容器：3列等分布局，列间距 */
+.advantage-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+/* 单个优势项：居中、内边距、白色背景、圆角、轻微阴影 */
+.advantage-item{
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 优势项图标：字体大小、底部间距 */
+.icon{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* 优势项标题：底部间距 */
+.advantage-item h3{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,156 @@
+/* ========== 登录/注册页面主容器样式 ========== */
+/* 主容器：白色背景、固定宽高、圆角、相对定位、垂直水平居中（注：class拼写错误，应为container） */
+.containe{
+    background-color: #fff;
+    width: 650px;
+    height: 410px;
+    border-radius: 5px;
+    position: relative; /* 作为子元素绝对定位的参考 */
+    margin: 100px auto; /* 垂直外边距100px，水平居中 */
+}
+
+/* ========== 表单容器（form-box）样式 ========== */
+/* 表单容器：绝对定位、粉色背景、固定宽高、圆角、弹性布局居中、过渡动画、层级置顶 */
+.form-box{
+    position: absolute; /* 相对于主容器定位 */
+    top:-10%; /* 向上偏移10%，超出主容器顶部 */
+    left: 5%; /* 向左偏移5% */
+    background-color: rgb(255, 237, 228); /* 浅粉色背景 */
+    width: 320px;
+    height: 500px;
+    border-radius: 5px;
+    display: flex; /* 弹性布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    transition: 0.5s ease-in-out; /* 0.5秒缓入缓出过渡动画（用于切换表单时的位移/显示） */
+    z-index: 2; /* 层级高于左右提示区，保证表单在最上层 */
+}
+
+/* ========== 注册/登录表单通用样式 ========== */
+/* 注册/登录表单容器：弹性布局、垂直排列、水平居中、宽度100% */
+.register-box,.login-box{
+    display: flex;
+    flex-direction: column; /* 子元素垂直排列 */
+    align-items: center; /* 水平居中 */
+    width: 100%;
+}
+
+/* 隐藏类：强制隐藏元素、过渡动画（用于切换注册/登录表单） */
+.hidden{
+    display: none;
+    transition: 0.5s;
+}
+
+/* 表单标题（h1）：字体大小、居中、底部间距、白色文字（注册/登录标题通用） */
+h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+    /*text-transform: uppercase;转大写 */
+    /* letter-spacing: 5px; 间距*/
+}
+
+/* 表单输入框：背景透明、宽度、无边框、底部边框、内边距、首行缩进、间距、字体大小、白色文字 */
+input{
+    background-color: transparent;    /* 背景透明，继承表单容器粉色背景 */
+    width: 70%;
+    border: none; /* 清除默认边框 */
+    border-bottom: 1px solid rgb(146, 144, 144); /* 浅灰色底部边框 */
+    padding: 10px 0; /* 上下内边距 */
+    text-indent: 10px;    /* 首行缩进10px，输入内容不贴边 */
+    margin: 8px 0; /* 上下间距，分隔输入框 */
+    font-size: 14px;
+    color: #333; /* 输入文字白色 */
+}
+
+/* 输入框占位符：深灰色文字 */
+input::placeholder{
+    color: #333;
+}
+
+/* 输入框聚焦状态：清除外轮廓、底部边框变深 */
+input:focus{
+    outline: none; /* 完全移除元素的外轮廓线 */
+    border-bottom: 1px solid #333;
+}
+
+/* input:focus::placeholder {
+    opacity: 0; 聚焦时隐藏占位符（注释备用）
+} */
+
+/* 表单按钮（注册/登录按钮）：宽度、顶部间距、白色背景、圆角、内边距、无边框、手型光标 */
+.form-box button{
+    width: 70%;
+    margin-top: 35px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 表单按钮悬浮状态：粉色背景、浅白色文字 */
+.form-box button:hover {
+    background-color: pink;
+    color: #f6f6f6;
+}
+
+/* ========== 左右提示区（con-box）通用样式 ========== */
+/* 提示区容器：宽度50%、弹性布局垂直排列、居中、绝对定位、垂直居中 */
+.con-box{
+    width: 50%;
+    display: flex;
+    flex-direction: column; /* 子元素垂直排列 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    position: absolute; /* 相对于主容器定位 */
+    top: 50%; /* 顶部偏移50% */
+    transform: translateY(-50%); /* 向上偏移自身50%，实现精准垂直居中 */
+}
+
+/* 左侧提示区：向左偏移2% */
+.con-box.left{
+    left: -2%;
+}
+
+/* 右侧提示区：向右偏移2% */
+.con-box.right{
+    right: -2%;
+}
+
+/* 提示区标题：灰色、加粗、居中、底部间距 */
+.con-box h2{
+    color: #878787;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+/* 提示区文案：小号字体、灰色、居中 */
+.con-box p{
+    font-size: 12px;
+    color: #878787;
+    text-align: center;
+}
+
+/* 提示区图片：固定宽高、上下间距 */
+.con-box img{
+    width: 150px;
+    height: 150px;
+    margin: 40px 0;
+}
+
+/* 提示区按钮（切换登录/注册按钮）：顶部间距、白色背景、圆角、内边距、手型光标 */
+.con-box button{
+    margin-top: 3%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* 提示区按钮悬浮状态：粉色背景 */
+.con-box button:hover{
+    background-color: pink;
+}

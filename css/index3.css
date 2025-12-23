@@ -1,0 +1,174 @@
+/* ===================== 购物车整体区域 ===================== */
+/* 购物车主模块容器（对应 <div class="cart-section">） */
+.cart-section{
+    margin: 40px 0;
+}
+
+/* 购物车内容容器（对应 <div class="cart-container">） */
+.cart-container{
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===================== 购物车表头 ===================== */
+/* 购物车表头行（对应 <div class="cart-header">）- 网格布局分配列宽 */
+.cart-header{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    /* gap: 10px; */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+}
+
+/* 表头各列通用样式（对应 .cart-item-header/.cart-price-header 等表头列） */
+.cart-item-header, .cart-price-header, .cart-quantity-header, .cart-subtotal-header, .cart-action-header {
+    width: 20%;
+    text-align: center;
+}
+
+/* ===================== 购物车商品项 ===================== */
+/* 单个购物车商品行（对应 <div class="cart-item">） */
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+/* 商品图片（对应 .cart-item 内 <img class="cart-item-img">） */
+.cart-item-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* 商品信息容器（图片+名称，对应 <div class="cart-item-info">） */
+.cart-item-info {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 商品单价/小计列（对应 <div class="cart-item-price">/<div class="cart-item-subtotal">） */
+.cart-item-price, .cart-item-subtotal {
+    width: 20%;
+    text-align: center;
+}
+
+/* 数量操作容器（对应 <div class="cart-item-quantity">） */
+.cart-item-quantity {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 数量增减按钮（对应 .cart-item-quantity 内 <button class="quantity-btn">） */
+.quantity-btn {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* 数量输入框（对应 .cart-item-quantity 内 <input class="quantity-input">） */
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+/* 操作列（删除按钮容器，对应 <div class="cart-item-action">） */
+.cart-item-action {
+    width: 20%;
+    text-align: center;
+}
+
+/* 删除按钮（对应 .cart-item-action 内 <button class="delete-btn">） */
+.delete-btn {
+    color: #ff4444;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* ===================== 空购物车状态 ===================== */
+/* 空购物车容器（对应 <div id="empty-cart-message" class="empty-cart">） */
+.empty-cart{
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* 空购物车图片（对应 .empty-cart 内 <img>） */
+.empty-cart img{
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* 空购物车提示文字（对应 .empty-cart 内 <p>） */
+.empty-cart p{
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* 空购物车跳转链接（对应 .empty-cart 内 <a>） */
+.empty-cart a{
+    background-color: rgb(191, 45, 45);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+/* ===================== 购物车汇总/操作 ===================== */
+/* 通用按钮样式（清空购物车按钮，对应 <button class="btn">） */
+.btn{
+    background: #f1f1f1;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 购物车汇总行（清空+总计+结算，对应 <div class="cart-summary">） */
+.cart-summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* 总计金额文字（对应 .cart-summary 内 <div class="cart-total">） */
+.cart-total{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 结算按钮（对应 <button id="checkout-btn" class="checkout-btn">） */
+.checkout-btn{
+    background: rgb(191, 45, 45);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 结算按钮hover状态 */
+.checkout-btn:hover{
+    background: rgb(222, 50, 50);
+}
