@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 头部导航栏：包含logo和核心导航菜单 -->
+    <header>
+        <div class="container"> <!-- 通用容器：控制内容宽度并居中 -->
+            <nav class="nav"> <!-- 导航容器：包含logo和菜单 -->
+                <div class="logo">甜品屋</div> <!-- 品牌logo -->
+                <ul class="menu"> <!-- 导航菜单列表 -->
+                    <li><a href="index.html" class="active">首页</a></li> <!-- 首页链接，active标识当前页 -->
+                    <li><a href="index2.html">热销甜品</a></li> <!-- 热销甜品页面链接 -->
+                    <li><a href="index3.html">购物车</a></li> <!-- 购物车页面链接 -->
+                    <li><a href="index4.html">关于我们</a></li> <!-- 关于品牌页面链接 -->
+                    <li><a href="index5.html">登录注册</a></li> <!-- 用户登录页面链接 -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 轮播图横幅：展示店铺主打视觉内容 -->
+    <section class="banner">
+        <div class="slider"> <!-- 轮播图容器 -->
+            <div class="slide-container"> <!-- 轮播图滚动容器：包含所有轮播项 -->
+                <div class="slide active"> <!-- 轮播项：active标识当前显示的轮播图 -->
+                    <img src="img/banner03.jpg"> <!-- 轮播图片 -->
+                </div>
+                <div class="slide"> <!-- 轮播项：未激活状态 -->
+                    <img src="img/banner02.jpg">
+                </div>
+                <div class="slide"> <!-- 轮播项：未激活状态 -->
+                    <img src="img/banner01.jpg">
+                </div>
+            </div>
+            <button class="slider-btn prev"><</button> <!-- 轮播左切换按钮 -->
+            <button class="slider-btn next">></button> <!-- 轮播右切换按钮 -->
+            <div class="slider-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主内容区：包含甜品分类和商品列表 -->
+    <div class="container">
+        <!-- 甜品分类模块：按品类划分，点击可筛选商品 -->
+        <div class="categories">
+            <h2>甜品分类</h2> <!-- 分类标题 -->
+            <div class="category-grid"> <!-- 分类卡片网格容器 -->
+                <div class="category-card" data-category="蛋糕"> <!-- 分类卡片：data-category标记分类名称，用于筛选 -->
+                    <img src="img/z1.jpg"> <!-- 分类配图 -->
+                    <div class="category-name">蛋糕</div> <!-- 分类名称 -->
+                </div>
+                <div class="category-card" data-category="饮品"> <!-- 饮品分类卡片 -->
+                    <img src="img/z2.jpg">
+                    <div class="category-name">饮品</div>
+                </div>
+                <div class="category-card" data-category="甜品"> <!-- 甜品分类卡片 -->
+                    <img src="img/z3.jpg">
+                    <div class="category-name">甜品</div>
+                </div>
+                <div class="category-card" data-category="小吃"> <!-- 小吃分类卡片 -->
+                    <img src="img/z4.jpg">
+                    <div class="category-name">小吃</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 商品展示区：展示所有甜品商品，可通过分类筛选 -->
+        <div class="products">
+            <h2>商品列表</h2> <!-- 商品列表标题 -->
+            <div class="product-grid"> <!-- 商品卡片容器 -->
+                <div class="product-card" data-product-category="蛋糕">
+                    <img src="img/z9.jpg">
+                    <h3>草莓蛋糕</h3>
+                    <p class="price">¥29.9</p>
+                </div>
+                <div class="product-card" data-product-category="蛋糕">
+                    <img src="img/z10.jpg">
+                    <h3>巧克力蛋糕</h3>
+                    <p class="price">¥39.9</p>
+                </div>
+                <div class="product-card" data-product-category="饮品">
+                    <img src="img/z11.jpg">
+                    <h3>珍珠奶茶</h3>
+                    <p class="price">¥12.9</p>
+                </div>
+                <div class="product-card" data-product-category="饮品">
+                    <img src="img/z12.jpg">
+                    <h3>杨枝甘露</h3>
+                    <p class="price">¥18.9</p>
+                </div>
+                <div class="product-card" data-product-category="甜品">
+                    <img src="img/z5.png">
+                    <h3>抹茶冰淇淋</h3>
+                    <p class="price">¥13.9</p>
+                </div>
+                <div class="product-card" data-product-category="小吃">
+                    <img src="img/z13.jpg">
+                    <h3>红糖糍粑</h3>
+                    <p class="price">¥8.8</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚：包含品牌联系信息、导航辅助、版权声明 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>联系我们</h3>
+                    <p>客服热线：123-456-789</p>
+                    <p>品牌邮箱：12345@xqj.com</p>
+                    <p>地址：##########</p>
+                </div>
+                <div class="footer-info">
+                    <h3>品牌消息</h3>
+                    <p>品牌故事</p>
+                    <p>食材来源</p>
+                    <p>品质认证</p>
+                </div>
+                <div class="footer-info">
+                    <h3>订购帮助</h3>
+                    <p>退换货政策</p>
+                    <p>配送说明</p>
+                    <p>常见问题</p>
+                </div>
+                <div class="footer-info">
+                    <h3>跟随我们</h3>
+                    <p>微信：XIE</p>
+                    <p>抖音：XIE</p>
+                    <p>小红书：XIE</p>
+                </div>
+            </div>
+            <div class="footer-bottom"> <!-- 页脚底部：版权声明 -->
+                <p>© 25216950101 | 谢巧静</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="js/index.js"></script>

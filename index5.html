@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index5.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">甜品店</div>
+                <ul class="menu">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="index2.html">热销甜品</a></li>
+                    <li><a href="index3.html">购物车</a></li>
+                    <li><a href="index4.html">关于我们</a></li>
+                    <li><a href="index5.html" class="active">登录注册</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>登 录 注 册</h1>
+            <p>精选人气甜品，优质食材精心制作，每一款都是味蕾盛宴</p>
+        </div>
+    </div>
+
+    <!-- 登录/注册页面主容器（注：class拼写错误，应为container） -->
+<div class="containe">
+    <!-- 表单容器：包含注册和登录两个表单 -->
+    <div class="form-box">
+        <!-- 注册表单区域：默认隐藏（hidden类），通过ID控制显示/隐藏 -->
+        <div class="register-box hidden" id="register-box">
+            <h1>register</h1> <!-- 注册表单标题 -->
+            <input type="text" id="regUsername" placeholder="用户名"> <!-- 注册用户名输入框 -->
+            <input type="email" id="regEmail" placeholder="邮箱"> <!-- 注册邮箱输入框（邮箱格式校验） -->
+            <input type="password" id="regPassword" placeholder="密码"> <!-- 注册密码输入框 -->
+            <input type="password" id="regConfirmPassword" placeholder="确认密码"> <!-- 注册确认密码输入框 -->
+            <button id="registerBtn">注册</button> <!-- 注册提交按钮 -->
+        </div>
+
+        <!-- 登录表单区域：默认显示，通过ID控制显示/隐藏 -->
+        <div class="login-box" id="loginBox">
+            <h1>login</h1> <!-- 登录表单标题 -->
+            <input type="text" id="loginUsername" placeholder="用户名"> <!-- 登录用户名输入框 -->
+            <input type="password" id="loginPassword" placeholder="密码"> <!-- 登录密码输入框 -->
+            <button id="loginBtn">登录</button> <!-- 登录提交按钮 -->
+        </div>
+    </div>
+
+    <!-- 左侧提示区域：引导已有账号用户切换到登录 -->
+    <div class="con-box left">
+        <h2>欢迎来到甜品屋</h2> <!-- 欢迎语 -->
+        <img src="img/z1.jpg"> <!-- 装饰图片 -->
+        <p>已有甜品账户？</p> <!-- 提示文案 -->
+        <button id="loginToggle">登录账号</button> <!-- 切换到登录表单的按钮 -->
+    </div>
+
+    <!-- 右侧提示区域：引导无账号用户切换到注册 -->
+    <div class="con-box right">
+        <h2>欢迎来到甜品屋</h2> <!-- 欢迎语 -->
+        <img src="img/z1.jpg"> <!-- 装饰图片 -->
+        <p>还没有甜品账户？</p> <!-- 提示文案 -->
+        <button id="registerToggle">创建新账号</button> <!-- 切换到注册表单的按钮 -->
+    </div>
+</div>
+    <script src="js/index5.js"></script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>联系我们</h3>
+                    <p>客服热线：123-456-789</p>
+                    <p>品牌邮箱：12345@xqj.com</p>
+                    <p>地址：##########</p>
+                </div>
+                <div class="footer-info">
+                    <h3>品牌消息</h3>
+                    <p>品牌故事</p>
+                    <p>食材来源</p>
+                    <p>品质认证</p>
+                </div>
+                <div class="footer-info">
+                    <h3>订购帮助</h3>
+                    <p>退换货政策</p>
+                    <p>配送说明</p>
+                    <p>常见问题</p>
+                </div>
+                <div class="footer-info">
+                    <h3>跟随我们</h3>
+                    <p>微信：XIE</p>
+                    <p>抖音：XIE</p>
+                    <p>小红书：XIE</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 25216950101 | 谢巧静</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
